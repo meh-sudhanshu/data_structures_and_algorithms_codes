@@ -1,12 +1,15 @@
 def main():
-    s="sssudd"
-    arr = [0 for i in range(26)]
+    s="sssuddu"
+    map={}
     for i in range(len(s)):
-        index = int(ord(s[i]))-97
-        arr[index]+=1
-    for i in range(26):
-        if arr[i]==1:
-            print(chr(i+97))
+        try:
+            map[s[i]]+=1
+        except:
+            map[s[i]]=1
+    for i in range(len(s)):
+        if map[s[i]]==1:
+            print(i,s[i])
             break
-    #print(arr)
+        if i == len(s)-1:
+            print(-1)
 main()

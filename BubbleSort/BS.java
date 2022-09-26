@@ -2,7 +2,7 @@ package BubbleSort;
 
 public class BS {
     public static void main(String[] args) {
-        int[] arr = {3,4,7,2,9};
+        int[] arr = {3,4,7,2,9,1};
 
         for(int i = 0; i<arr.length-1;i++){
             boolean isSwapped = false;
@@ -17,6 +17,10 @@ public class BS {
             if(isSwapped == false){
                 break;
             }
+            for(int e : arr){
+                System.out.print(e+" ");
+            }
+            System.out.println();
         }
 
         for(int e : arr){
